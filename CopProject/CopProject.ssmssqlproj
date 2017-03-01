@@ -1,9 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SqlWorkbenchSqlProject">
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="CopProject">
   <Items>
-    <LogicalFolder Name="Connections" Type="2" />
-    <LogicalFolder Name="Queries" Type="0" />
-    <LogicalFolder Name="Miscellaneous" Type="3" />
-
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="LAPTOP-7LRI88O2:LAPTOP-7LRI88O2\David Lai">
+          <Created>2017-03-01T13:26:42.1508136-05:00</Created>
+          <Type>SQL</Type>
+          <Server>LAPTOP-7LRI88O2</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>CopProjectDB</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="AddData.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-7LRI88O2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-7LRI88O2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>AddData.sql</FullPath>
+        </FileNode>
+        <FileNode Name="AddOrganization.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-7LRI88O2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-7LRI88O2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>AddOrganization.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CREATETBLES.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-7LRI88O2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-7LRI88O2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CREATETBLES.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetAll.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-7LRI88O2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-7LRI88O2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>GetAll.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetAllPosts.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-7LRI88O2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-7LRI88O2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>GetAllPosts.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetAllUsers.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-7LRI88O2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-7LRI88O2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>GetAllUsers.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
   </Items>
 </SqlWorkbenchSqlProject>

@@ -107,8 +107,6 @@ CREATE PROCEDURE dbo.spAddPost
 	@Post varchar(5000),
 	@Date smalldatetime,
 	@UserId int
-	
-	
 
 	AS
 
