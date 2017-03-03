@@ -51,13 +51,16 @@ GO
 
 CREATE TABLE dbo.Posts(
 PostID int PRIMARY KEY NOT NULL IDENTITY(1,1),
-Userid int NOT NULL,
+UserId int NOT NULL,
+PosterFirstName varchar(25) NOT NULL,
+PosterLastName varchar(25),
+Email varchar(50),
 ReportNumber varchar(20) NOT NULL,
 CONSTRAINT FK_Posts_Users FOREIGN KEY (UserID)
 	REFERENCES dbo.Users (UserID)
 	ON DELETE CASCADE
 	ON UPDATE CASCADE,
-Post varchar(5000),
+PostMessage varchar(5000),
 Date smalldatetime NOT NULL)
 GO
 
@@ -103,16 +106,19 @@ GO
 CREATE PROCEDURE dbo.spAddPost
 	@Badge int,
 	@OrgID int,
+	@PosterFirstName varchar(25),
+	@PosterLastName varchar(25),
+	@Email varchar(50),
 	@ReportNumber varchar(20),
-	@Post varchar(5000),
+	@PostMessage varchar(5000),
 	@Date smalldatetime,
 	@UserId int
 
 	AS
 
 	SET @UserId=(SELECT UserID from dbo.Users WHERE Badge = @Badge AND  OrgId = @OrgID)
-	INSERT INTO dbo.Posts (UserId, ReportNumber, Post, Date)
-	VALUES (@UserId, @ReportNumber, @Post, @Date)
+	INSERT INTO dbo.Posts (UserId, PosterFirstName, PosterLastName, Email, ReportNumber, PostMessage, Date)
+	VALUES (@UserId, @PosterFirstName, @PosterLastName, @Email, @ReportNumber, @PostMessage, @Date)
 
 GO
 
