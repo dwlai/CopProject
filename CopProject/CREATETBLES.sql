@@ -45,8 +45,10 @@ CONSTRAINT FK_Users_Organizations FOREIGN KEY (OrgID)
 	ON DELETE CASCADE
 	ON UPDATE CASCADE,
 Badge int NOT NULL,
+OfficerRank varchar(20) NOT NULL,
 FirstName varchar(25) NOT NULL,
-LastName varchar(25) NOT NULL)
+LastName varchar(25) NOT NULL,
+Email varchar(50) NOT NULL)
 GO
 
 CREATE TABLE dbo.Posts(
@@ -93,13 +95,15 @@ CREATE PROCEDURE dbo.spAddUser
 
 	@OrgID int,
 	@Badge int,
+	@OfficerRank varchar(20),
 	@FirstName varchar(25),
-	@LastName varchar(25)
+	@LastName varchar(25),
+	@Email varchar(50)
 
 	AS
 
-	INSERT INTO dbo.Users (OrgID, Badge, FirstName, LastName)
-	VALUES(@OrgID, @Badge, @FirstName, @LastName)
+	INSERT INTO dbo.Users (OrgID, Badge, OfficerRank, FirstName, LastName, Email)
+	VALUES(@OrgID, @Badge, @OfficerRank, @FirstName, @LastName, @Email)
 
 GO
 
