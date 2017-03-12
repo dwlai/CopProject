@@ -39,6 +39,7 @@ GO
 CREATE TABLE dbo.Users(
 UserID int PRIMARY KEY NOT NULL IDENTITY(1,1),
 OrgID int NOT NULL,
+Unit varchar(20) NOT NULL,
 CONSTRAINT UC_OrgID_Badge UNIQUE (OrgID, Badge),
 CONSTRAINT FK_Users_Organizations FOREIGN KEY (OrgID)
 	REFERENCES dbo.Organizations (OrgID)
@@ -95,6 +96,7 @@ CREATE PROCEDURE dbo.spAddUser
 
 	@OrgID int,
 	@Badge int,
+	@Unit varchar(20),
 	@OfficerRank varchar(20),
 	@FirstName varchar(25),
 	@LastName varchar(25),
@@ -102,8 +104,8 @@ CREATE PROCEDURE dbo.spAddUser
 
 	AS
 
-	INSERT INTO dbo.Users (OrgID, Badge, OfficerRank, FirstName, LastName, Email)
-	VALUES(@OrgID, @Badge, @OfficerRank, @FirstName, @LastName, @Email)
+	INSERT INTO dbo.Users (OrgID, Badge, Unit, OfficerRank, FirstName, LastName, Email)
+	VALUES(@OrgID, @Badge, @Unit, @OfficerRank, @FirstName, @LastName, @Email)
 
 GO
 
