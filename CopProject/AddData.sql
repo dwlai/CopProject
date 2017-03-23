@@ -1,12 +1,11 @@
-USE CopProjectDB
-GO
+
 
 EXECUTE dbo.spAddOrganization "Toronto Police Service"
 
-EXECUTE dbo.spAddUser 1, 11098, "Traffic Services", "Police Constable", Zachary, Lobsinger, "zach@zach.com"
+EXECUTE dbo.spAddUser 1, 11098, "Traffic Services", "Police Constable", Zachary, Lobsinger, "zach@zach.com", "hello"
 GO
 
-EXECUTE dbo.spAddUser 1, 5383, "52 Division", "Police Constable", Bernie, Gill, "bernie@bernie.com"
+EXECUTE dbo.spAddUser 1, 5383, "52 Division", "Police Constable", Birinder, Gill, "bernie@bernie.com", "hello2"
 GO
 
 EXECUTE dbo.spAddPost 11098, 1, "John", "Harry", "Harry@harry.com", 1042304, "Good Job Zach", "2017-03-01 18:00:00", NULL

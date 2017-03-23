@@ -1,5 +1,3 @@
-USE CopProjectDB
-GO
 
 
 IF OBJECT_ID('dbo.Posts', 'U') IS NOT NULL
@@ -49,7 +47,8 @@ Badge int NOT NULL,
 OfficerRank varchar(20) NOT NULL,
 FirstName varchar(25) NOT NULL,
 LastName varchar(25) NOT NULL,
-Email varchar(50) NOT NULL)
+Email varchar(50) NOT NULL,
+Password varchar(50))
 GO
 
 CREATE TABLE dbo.Posts(
@@ -100,12 +99,13 @@ CREATE PROCEDURE dbo.spAddUser
 	@OfficerRank varchar(20),
 	@FirstName varchar(25),
 	@LastName varchar(25),
-	@Email varchar(50)
+	@Email varchar(50),
+	@Password varchar(50)
 
 	AS
 
-	INSERT INTO dbo.Users (OrgID, Badge, Unit, OfficerRank, FirstName, LastName, Email)
-	VALUES(@OrgID, @Badge, @Unit, @OfficerRank, @FirstName, @LastName, @Email)
+	INSERT INTO dbo.Users (OrgID, Badge, Unit, OfficerRank, FirstName, LastName, Email, Password)
+	VALUES(@OrgID, @Badge, @Unit, @OfficerRank, @FirstName, @LastName, @Email, @Password)
 
 GO
 
